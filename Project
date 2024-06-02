@@ -1,0 +1,45 @@
+// Step 1: Create a variable to hold your NFTs
+let x = [];
+
+// Step 2: Create the mintNFT function
+function mintNFT(a, b, c, d) {
+    // Create an NFT object with metadata
+    const e = {
+        name: a,
+        description: b,
+        creator: c,
+        dateCreated: d
+    };
+    // Store the NFT in the nftCollection array
+    x.push(e);
+}
+
+// Step 3: Create the listNFTs function
+function listNFTs() {
+    x.forEach(e => {
+        console.log("Name: " + e.name);
+        console.log("Description: " + e.description);
+        console.log("Creator: " + e.creator);
+        console.log("Date Created: " + e.dateCreated);
+        console.log("-------------------------");
+    });
+}
+
+// Step 4: Create the getTotalSupply function
+function getTotalSupply() {
+    return x.length;
+}
+
+// Call your functions below this line
+
+// Minting some NFTs with different values
+mintNFT("Rare Cat #1", "A rare digital cat", "Artist C", "2024-06-01");
+mintNFT("Magic Dragon #2", "A magical dragon", "Artist D", "2024-06-02");
+mintNFT("Galactic Warrior #3", "A warrior from space", "Artist E", "2024-06-03");
+mintNFT("Mystic Tree #4", "A mystical tree", "Artist F", "2024-06-04");
+
+// Listing all NFTs
+listNFTs();
+
+// Printing the total number of NFTs
+console.log("Total Supply: " + getTotalSupply());
