@@ -1,45 +1,45 @@
 // Step 1: Create a variable to hold your NFTs
-let x = [];
+let anubabh = [];
 
 // Step 2: Create the mintNFT function
-function mintNFT(a, b, c, d) {
+function mintNFT(name, description, creator, dateCreated) {
     // Create an NFT object with metadata
-    const e = {
-        name: a,
-        description: b,
-        creator: c,
-        dateCreated: d
+    const nft = {
+        name: name,
+        description: description,
+        creator: creator,
+        dateCreated: dateCreated
     };
-    // Store the NFT in the nftCollection array
-    x.push(e);
+    // Store the NFT in the anubabh array
+    anubabh.push(nft);
 }
 
 // Step 3: Create the listNFTs function
 function listNFTs() {
-    x.forEach(e => {
-        console.log("Name: " + e.name);
-        console.log("Description: " + e.description);
-        console.log("Creator: " + e.creator);
-        console.log("Date Created: " + e.dateCreated);
+    anubabh.forEach(nft => {
+        console.log("Name: " + nft.name);
+        console.log("Description: " + nft.description);
+        console.log("Creator: " + nft.creator);
+        console.log("Date Created: " + nft.dateCreated);
         console.log("-------------------------");
     });
 }
 
 // Step 4: Create the getTotalSupply function
 function getTotalSupply() {
-    return x.length;
+    return anubabh.length;
 }
 
 // Call your functions below this line
 
-// Minting some NFTs with different values
-mintNFT("Rare Cat #1", "A rare digital cat", "Artist C", "2024-06-01");
-mintNFT("Magic Dragon #2", "A magical dragon", "Artist D", "2024-06-02");
-mintNFT("Galactic Warrior #3", "A warrior from space", "Artist E", "2024-06-03");
-mintNFT("Mystic Tree #4", "A mystical tree", "Artist F", "2024-06-04");
+// Creating some NFTs with Indian-themed values
+mintNFT("Garam Masala", "Bollywood Movie", "Artist A", "2024-06-01");
+mintNFT("Bhangra Beats", "Saree", "Artist B", "2024-06-02");
+mintNFT("Taj Mahal", "Spicy Curry", "Artist C", "2024-06-03");
+mintNFT("Chai Time", "Henna Tattoo", "Artist D", "2024-06-04");
 
-// Listing all NFTs
+// Displaying all NFTs
 listNFTs();
 
 // Printing the total number of NFTs
-console.log("Total Supply: " + getTotalSupply());
+console.log("Total NFTs: " + getTotalSupply())
